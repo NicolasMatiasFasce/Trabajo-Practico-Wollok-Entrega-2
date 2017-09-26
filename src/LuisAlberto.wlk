@@ -12,11 +12,10 @@ import Albumes.*
 import Musico.*
 
 
-object luisAlberto inherits Musico(#{})  {
-	var grupo = solista
+object luisAlberto inherits Musico(#{},0,solista)  {
 	var guitarra = fender
 	
-	method habilidad() = return 100.min(8 * guitarra.valor())
+	override method habilidad() = return 100.min(8 * guitarra.valor())
 	
 	method ejecutaBienUnaCancion(cancion) = true
 	
@@ -26,15 +25,6 @@ object luisAlberto inherits Musico(#{})  {
 		}else{
 			return 1000
 		}
-	}
-	method esSolista() = grupo.esSolista()
-	method dejarGrupo(){
-		grupo.eliminarDelGrupo(self)
-		self.entrarAUnGrupo(solista)
-	}
-	method entrarAUnGrupo(otroGrupo){
-		grupo = otroGrupo
-		otroGrupo.agregarAlGrupo(self)
 	}
 	method guitarra(nuevaGuitarra){
 		guitarra = nuevaGuitarra
