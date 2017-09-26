@@ -9,6 +9,8 @@ import LunaPark.*
 import Pimpinela.*
 import Presentacion.*
 import Solista.*
+import Musico.*
+import Albumes.*
 
 describe "Tests de la entrega 1"{ 
 	
