@@ -8,6 +8,7 @@ import LuisAlberto.*
 import LunaPark.*
 import Pimpinela.*
 import Presentacion.*
+import Albumes.*
 
 
 object solista {

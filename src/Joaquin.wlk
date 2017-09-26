@@ -8,6 +8,7 @@ import LunaPark.*
 import Pimpinela.*
 import Presentacion.*
 import Solista.*
+import Albumes.*
 
 class Joaquin {
     var grupo
@@ -24,7 +25,7 @@ class Joaquin {
         }
     }
     method esSolista() = grupo.esSolista()
-    method ejecutaBienUnaCancion(cancion) = cancion.duracion() > 300
+    method ejecutaBienUnaCancion(cancion) = cancion.cancionCorta()
     method costoDeUnaPresentacion(presentacion, costoSolista, costoEnGrupo){
         if(presentacion.solista()){
             return costoSolista

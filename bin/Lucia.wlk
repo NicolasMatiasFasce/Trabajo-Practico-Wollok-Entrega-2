@@ -8,6 +8,7 @@ import LunaPark.*
 import Pimpinela.*
 import Presentacion.*
 import Solista.*
+import Albumes.*
 
 
 class Lucia {

@@ -8,6 +8,7 @@ import LunaPark.*
 import Pimpinela.*
 import Presentacion.*
 import Solista.*
+import Albumes.*
 
 class Cancion {
 	var duracion
@@ -22,7 +23,7 @@ class Cancion {
 		return letra.contains(palabra)
 	}
 
-	method duracion() {
-		return duracion
+	method cancionCorta() {
+		return duracion < 300
 	}
 }

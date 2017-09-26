@@ -8,7 +8,7 @@ import LuisAlberto.*
 import LunaPark.*
 import Presentacion.*
 import Solista.*
-
+import Albumes.*
 
 object pimpinela {
 	
