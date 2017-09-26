@@ -12,7 +12,7 @@ import Albumes.*
 import Musico.*
 
 
-object luisAlberto inherits Musico {
+object luisAlberto inherits Musico(#{})  {
 	var grupo = solista
 	var guitarra = fender
 	

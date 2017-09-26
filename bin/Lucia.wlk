@@ -13,26 +13,13 @@ import Musico.*
 
 
 class Lucia inherits Musico {
-	var grupo
-	var habilidad
-	var albumesPublicados = #{}
 	var palabraClave
 	
-	constructor(unaHabilidad,solitaOEnGrupo,losAlbumesPublicados,laPalabraClave){
-		habilidad = unaHabilidad
-		grupo = solitaOEnGrupo
-		albumesPublicados = losAlbumesPublicados
+	constructor(unaHabilidad,solitaOEnGrupo,losAlbumesPublicados,laPalabraClave) =
+	super(losAlbumesPublicados,unaHabilidad,solitaOEnGrupo){
 		palabraClave = laPalabraClave
 	}
 	
-	method habilidad(){
-		if(!self.esSolista()){
-			return habilidad -20
-		}else{
-			return habilidad
-		}
-	}
-	method esSolista() = grupo.esSolista()
 	method ejecutaBienUnaCancion(cancion) = cancion.estaEnLaLetra(palabraClave)
 	method costoDeUnaPresentacion(presentacion){
 		if(presentacion.esEnUnLugarConcurrido()){
@@ -40,13 +27,5 @@ class Lucia inherits Musico {
 		}else{
 			return 400
 		}
-	}
-	method dejarGrupo(){
-		grupo.eliminarDelGrupo(self)
-		self.entrarAUnGrupo(solista)
-	}
-	method entrarAUnGrupo(otroGrupo){
-		grupo = otroGrupo
-		otroGrupo.agregarAlGrupo(self)
 	}
 }
