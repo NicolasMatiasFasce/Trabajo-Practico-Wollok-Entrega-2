@@ -42,6 +42,6 @@ class Musico {
 		otroGrupo.agregarAlGrupo(self)
 	}
 	method agregarAlbum(nuevoAlbum){
-		albumesPublicados = nuevoAlbum
+		albumesPublicados.add(nuevoAlbum)
 	}
 }
