@@ -11,7 +11,13 @@ import Solista.*
 import Albumes.*
 
 class Musico {
-
-
+	var albumesPublicados = #{}
+	constructor(losAlbumesPublicados){
+		albumesPublicados = losAlbumesPublicados
+	}
+	method esMinimalista() = albumesPublicados.all {album => album.todasLasCancionesSonCortas()}
+	
+	method transformarAlbumACancion() = albumesPublicados.map({album => album.canciones()})
+	method laCancionTieneUnaPalabra (palabra) = self.transformarAlbumACancion().filter({ cancion => cancion.estaEnLaLetra(palabra) })
 
 }
