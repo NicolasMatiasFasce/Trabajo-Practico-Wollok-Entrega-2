@@ -20,10 +20,16 @@ class Cancion {
 	}
 	
 	method estaEnLaLetra(palabra) {
-		return letra.contains(palabra)
+		return letra.toLowerCase().contains(palabra.toLowerCase())
+	}
+	method contenidoDeLetra(){
+		return letra.length()
 	}
 
 	method cancionCorta() {
 		return duracion < 300
+	}
+	method duracion() {
+		return duracion
 	}
 }

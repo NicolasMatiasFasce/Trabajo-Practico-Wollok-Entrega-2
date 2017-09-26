@@ -25,8 +25,8 @@ class Albumes {
 		unidadesALaVenta = lasUnidadesALaVenta
 		unidadesVendidas = lasUnidadesVendidas
 	}
-	method albumMinimalista(){
-	}
-
+	method albumMinimalista() = canciones.all({cancion => cancion.cancionCorta()})
+	method duracionDelAlbum() = canciones.sum {cancion => cancion.duracion()}
+	method cancionMasLarga() = canciones.max {cancion => cancion.contenidoDeLetra()}
 
 }
