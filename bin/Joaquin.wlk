@@ -13,20 +13,20 @@ import Musico.*
 
 
 class Joaquin inherits Musico {
-    var grupo
-    var habilidad
-    constructor(grupoDelMusico, habilidadDelMusico){
-        grupo = grupoDelMusico
-		habilidad = habilidadDelMusico
+    var plusPortocarEnGrupo
+    
+    constructor(elPlusPortocarEnGrupo,losAlbumesPublicados,laHabilidad,grupoOSolista)=
+    super(losAlbumesPublicados,laHabilidad,grupoOSolista){
+    	plusPortocarEnGrupo = elPlusPortocarEnGrupo
     }
-    method habilidad(){
+    
+    override method habilidad(){
         if(!self.esSolista()){
-            return habilidad + 5
+            return habilidad + plusPortocarEnGrupo
         }else{
             return habilidad
         }
     }
-    method esSolista() = grupo.esSolista()
     method ejecutaBienUnaCancion(cancion) = cancion.duracion() > 300
     method costoDeUnaPresentacion(presentacion){
         if(presentacion.solista()){
@@ -34,13 +34,5 @@ class Joaquin inherits Musico {
         }else{
             return 50
         }
-    }
-    method dejarGrupo(){
-        grupo.eliminarDelGrupo(self)
-        self.entrarAUnGrupo(solista)
-	}
-    method entrarAUnGrupo(otroGrupo){
-        grupo = otroGrupo
-        otroGrupo.agregarAlGrupo(self)
     }
 }
