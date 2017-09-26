@@ -27,12 +27,12 @@ class Joaquin inherits Musico {
         }
     }
     method esSolista() = grupo.esSolista()
-    method ejecutaBienUnaCancion(cancion) = cancion.cancionCorta()
-    method costoDeUnaPresentacion(presentacion, costoSolista, costoEnGrupo){
+    method ejecutaBienUnaCancion(cancion) = cancion.duracion() > 300
+    method costoDeUnaPresentacion(presentacion){
         if(presentacion.solista()){
-            return costoSolista
+            return 100
         }else{
-            return costoEnGrupo
+            return 50
         }
     }
     method dejarGrupo(){
