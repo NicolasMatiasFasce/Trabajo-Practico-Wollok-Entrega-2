@@ -9,9 +9,10 @@ import Pimpinela.*
 import Presentacion.*
 import Solista.*
 import Albumes.*
+import Musico.*
 
 
-class Lucia {
+class Lucia inherits Musico {
 	var grupo
 	var habilidad
 	var albumesPublicados = #{}

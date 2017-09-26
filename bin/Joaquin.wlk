@@ -9,8 +9,10 @@ import Pimpinela.*
 import Presentacion.*
 import Solista.*
 import Albumes.*
+import Musico.*
 
-class Joaquin {
+
+class Joaquin inherits Musico {
     var grupo
     var habilidad
     constructor(grupoDelMusico, habilidadDelMusico){
