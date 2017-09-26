@@ -31,7 +31,7 @@ class Lucia {
 		}
 	}
 	method esSolista() = grupo.esSolista()
-	method ejecutaBienUnaCancion(cancion) = cancion.estaEnLaLetra("familia")
+	method ejecutaBienUnaCancion(cancion) = cancion.estaEnLaLetra(palabraClave)
 	method costoDeUnaPresentacion(presentacion){
 		if(presentacion.esEnUnLugarConcurrido()){
 			return 500

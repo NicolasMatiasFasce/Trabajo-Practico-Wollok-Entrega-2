@@ -22,6 +22,7 @@ describe "Tests de la entrega 1"{
 	var laFamilia
 	var presentacionLunaPark
 	var presentacionLaTrastienda
+	var lucia = new Lucia(70,solista,#{},"familia")
 	
 	fixture{
 		laFamilia = new Cancion(264, "Quiero brindar por mi gente sencilla, por el amor brindo por la familia")
