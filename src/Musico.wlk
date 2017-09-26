@@ -23,6 +23,14 @@ class Musico {
 	
 	method transformarAlbumACancion() = albumesPublicados.map({album => album.canciones()})
 	method laCancionTieneUnaPalabra (palabra) = self.transformarAlbumACancion().filter({ cancion => cancion.estaEnLaLetra(palabra) })
+	method duracionDeObra(){
+		if(!albumesPublicados.isEmpty()){
+			return albumesPublicados.sum({album => album.duracionDelAlbum()})
+		}else{
+			return 0
+		}
+	}
+	method laPego() = albumesPublicados.all {album => album.seVendioBien()}
 	method habilidad() = habilidad
 	method esSolista() = grupo.esSolista()
 	method dejarGrupo(){

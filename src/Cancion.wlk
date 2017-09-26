@@ -27,7 +27,7 @@ class Cancion {
 	}
 
 	method cancionCorta() {
-		return duracion < 300
+		return duracion < 180
 	}
 	method duracion() {
 		return duracion

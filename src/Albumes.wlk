@@ -29,5 +29,5 @@ class Albumes {
 	method duracionDelAlbum() = canciones.sum {cancion => cancion.duracion()}
 	method cancionMasLarga() = canciones.max {cancion => cancion.contenidoDeLetra()}
 	method canciones() = canciones
-
+	method seVendioBien()= unidadesVendidas > unidadesALaVenta * 0.75
 }
