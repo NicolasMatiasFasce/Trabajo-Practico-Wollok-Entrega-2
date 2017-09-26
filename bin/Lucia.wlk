@@ -10,9 +10,18 @@ import Presentacion.*
 import Solista.*
 
 
-object lucia {
-	var grupo = pimpinela
-	var habilidad = 70
+class Lucia {
+	var grupo
+	var habilidad
+	var albumesPublicados = #{}
+	var palabraClave
+	
+	constructor(unaHabilidad,solitaOEnGrupo,losAlbumesPublicados,laPalabraClave){
+		habilidad = unaHabilidad
+		grupo = solitaOEnGrupo
+		albumesPublicados = losAlbumesPublicados
+		palabraClave = laPalabraClave
+	}
 	
 	method habilidad(){
 		if(!self.esSolista()){
