@@ -11,7 +11,7 @@ import Presentacion.*
 import Solista.*
 
 
-class Albumes {
+class Album {
 	var titulo
 	var canciones = #{}
 	var fechaDeLanzamiento
