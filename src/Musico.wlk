@@ -19,10 +19,10 @@ class Musico {
 		habilidad = laHabilidad
 		grupo = grupoOSolista
 	}
-	method esMinimalista() = albumesPublicados.all {album => album.todasLasCancionesSonCortas()}
+	method esMinimalista() = albumesPublicados.all ({album => album.albumMinimalista()})
 	
-	method transformarAlbumACancion() = albumesPublicados.map({album => album.canciones()})
-	method laCancionTieneUnaPalabra (palabra) = self.transformarAlbumACancion().filter({ cancion => cancion.estaEnLaLetra(palabra) })
+	method transformarAlbumACancion() = albumesPublicados.map({album => album.canciones()}).flatten()
+	method laCancionTieneUnaPalabra (palabra) = self.transformarAlbumACancion().filter({ cancion => cancion.estaEnLaLetra(palabra) }).asSet()
 	method duracionDeObra(){
 		if(!albumesPublicados.isEmpty()){
 			return albumesPublicados.sum({album => album.duracionDelAlbum()})
